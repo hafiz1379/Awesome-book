@@ -1,4 +1,4 @@
-let $ = document
+const $ = document;
 
 const bookArray = JSON.parse(localStorage.getItem('bookArray')) || [];
 
