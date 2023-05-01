@@ -1,32 +1,54 @@
-const $ = document
+let $ = document
 
-const inputBook = $.getElementById('book')
-const inputAuthor = $.getElementById('author')
-const addBtn = $.getElementById('add')
+const bookArray = JSON.parse(localStorage.getItem('bookArray')) || [];
 
-let booksArray = []
-function addNewBook() {
-    let newBookName = inputBook.value
-    let newAuthoorName= inputAuthor.value
-    
-    let newBookObj = {
-        title: newBookName,
-        author: newAuthoorName
-    }
-    booksArray.push(newBookName)
-    booksArray.push(newAuthoorName)
-    setLocalStorage(booksArray)
-    bookGenerator(booksArray)
+function updateLocalStorage() {
+  localStorage.setItem('bookArray', JSON.stringify(bookArray));
 }
 
-function setLocalStorage (bookList){
-    localStorage.setItem('books', JSON.stringify(bookList))
+function displayBooks() {
+  const bookList = $.getElementById('booklist');
+
+  bookList.innerHTML = '';
+  bookArray.forEach((book, index) => {
+    const div = $.createElement('div');
+    div.setAttribute('id', 'div');
+    bookList.appendChild(div);
+    const titleB = $.createElement('h3');
+    titleB.innerHTML = `${book.book}`;
+    div.appendChild(titleB);
+    const authorB = $.createElement('h3');
+    authorB.innerHTML = `${book.author}`;
+    div.appendChild(authorB);
+    const buttonB = $.createElement('h3');
+    const removeButton = $.createElement('button');
+    removeButton.innerHTML = 'Remove';
+    removeButton.addEventListener('click', () => {
+      buttonB.parentElement.remove();
+      bookArray.splice(index, 1);
+      updateLocalStorage();
+    });
+    buttonB.appendChild(removeButton);
+    div.appendChild(buttonB);
+    const hr = $.createElement('hr');
+    div.appendChild(hr);
+  });
+}
+function addBook(author, book) {
+  bookArray.push({ author, book });
+  updateLocalStorage();
+  displayBooks();
 }
 
-function bookGenerator (bookList){
-    bookList.forEach(function (book) {
-        console.log(book);
-    })
-}
-
-addBtn.addEventListener('click', addNewBook)
+const authorInput = $.getElementById('author');
+const bookInput = $.getElementById('book');
+const addButton = $.getElementById('add');
+addButton.addEventListener('click', () => {
+  const author = authorInput.value;
+  const book = bookInput.value;
+  addBook(author, book);
+  authorInput.value = '';
+  bookInput.value = '';
+});
+updateLocalStorage();
+displayBooks();
