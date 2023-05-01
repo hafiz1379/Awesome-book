@@ -40,6 +40,16 @@ function addBook(author, book) {
   displayBooks();
 }
 
+const authorInput = $.getElementById('author');
+const bookInput = $.getElementById('book');
+const addButton = $.getElementById('add');
+addButton.addEventListener('click', () => {
+  const author = authorInput.value;
+  const book = bookInput.value;
+  addBook(author, book);
+  authorInput.value = '';
+  bookInput.value = '';
+});
 
 updateLocalStorage();
 displayBooks();
