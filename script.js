@@ -7,33 +7,26 @@ const addBtn = $.getElementById('add')
 let booksArray = []
 function addNewBook() {
     let newBookName = inputBook.value
+    let newAuthoorName= inputAuthor.value
     
     let newBookObj = {
-        title: newBookName
+        title: newBookName,
+        author: newAuthoorName
     }
     booksArray.push(newBookName)
+    booksArray.push(newAuthoorName)
     setLocalStorage(booksArray)
+    bookGenerator(booksArray)
 }
 
 function setLocalStorage (bookList){
     localStorage.setItem('books', JSON.stringify(bookList))
 }
 
-addBtn.addEventListener('click', addNewBook)
-
-let authorArray = []
-function addNewAuthor() {
-    let newAuthoorName = inputAuthor.value
-    
-    let newAuthorObj = {
-        title: newAuthoorName
-    }
-    authorArray.push(newAuthoorName)
-    setLocalStorage(authorArray)
-
-    function setLocalStorage (authorList){
-        localStorage.setItem('authors', JSON.stringify(authorList))
-    }
-    
+function bookGenerator (bookList){
+    bookList.forEach(function (book) {
+        console.log(book);
+    })
 }
-addBtn.addEventListener('click', addNewAuthor)
+
+addBtn.addEventListener('click', addNewBook)
