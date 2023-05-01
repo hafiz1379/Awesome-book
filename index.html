@@ -8,13 +8,17 @@
 </head>
 <body>
     <h1>Awesome book</h1>
+    <article id="booklist"> </article>
     <div>
-        <input type="text" id="book" placeholder="Title">
+        <label for="book" hidden>Title</label>
+        <input type="text" id="book" placeholder="Title" required>
     </div>
     <br>
     <div>
-        <input type="text" id="author" placeholder="Author">
+        <label for="author" hidden>Author</label>
+        <input type="text" id="author" placeholder="Author" required>
     </div>
+    <br>
     <button type="button" id="add">Add Book</button>
     <script src="script.js"></script>
 </body>
