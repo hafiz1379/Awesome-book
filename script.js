@@ -1,4 +1,5 @@
-let $ = document; 
+const $ = document;
+
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -22,7 +23,6 @@ class Library {
       this.titleInput.value = '';
     });
 
-    
     this.displayBooks();
   }
 
