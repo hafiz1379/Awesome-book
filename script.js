@@ -1,3 +1,4 @@
+let $ = document; 
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -8,10 +9,10 @@ class Book {
 class Library {
   constructor() {
     this.bookArray = JSON.parse(localStorage.getItem('bookArray')) || [];
-    this.bookList = document.getElementById('booklist');
-    this.authorInput = document.getElementById('author');
-    this.titleInput = document.getElementById('title');
-    this.addButton = document.getElementById('add');
+    this.bookList = $.getElementById('booklist');
+    this.authorInput = $.getElementById('author');
+    this.titleInput = $.getElementById('title');
+    this.addButton = $.getElementById('add');
 
     this.addButton.addEventListener('click', () => {
       const author = this.authorInput.value;
@@ -32,14 +33,14 @@ class Library {
   displayBooks() {
     this.bookList.innerHTML = '';
     this.bookArray.forEach((book, index) => {
-      const bookContainer = document.createElement('div');
+      const bookContainer = $.createElement('div');
       bookContainer.setAttribute('id', 'div');
       this.bookList.appendChild(bookContainer);
-      const bookDetails = document.createElement('h3');
+      const bookDetails = $.createElement('h3');
       bookDetails.innerHTML = `"${book.author}" by ${book.title}`;
       bookContainer.appendChild(bookDetails);
-      const buttonB = document.createElement('h3');
-      const removeButton = document.createElement('button');
+      const buttonB = $.createElement('h3');
+      const removeButton = $.createElement('button');
       removeButton.innerHTML = 'Remove';
 
       removeButton.addEventListener('click', () => {
