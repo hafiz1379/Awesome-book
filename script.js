@@ -1,4 +1,3 @@
-const $ = document;
 
 class Book {
   constructor(title, author) {
@@ -6,6 +5,8 @@ class Book {
     this.author = author;
   }
 }
+
+
 
 class Library {
   constructor() {
