@@ -6,7 +6,7 @@ class Book {
   }
 }
 
-
+const $ = document;
 
 class Library {
   constructor() {
