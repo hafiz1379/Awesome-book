@@ -25,7 +25,7 @@ contactLink.addEventListener('click', () => {
   booksSection.style.display = 'none';
   bookInputsSection.style.display = 'none';
   contactSection.style.display = 'flex';
-}); 
+});
 class Book {
   constructor(title, author) {
     this.title = title;
