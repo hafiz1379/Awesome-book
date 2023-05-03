@@ -1,39 +1,134 @@
+
 * {
   scroll-behavior: smooth;
 }
 
 body {
+  box-sizing: border-box;
+}
+
+#header {
   display: flex;
+  justify-content: space-around;
+  margin-right: 78px;
+  width: 100%;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+#header ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#header ul a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  border-bottom: 1px solid transparent;
+}
+
+#header ul a:hover {
+  border-bottom: 1px solid black;
+}
+
+#contact {
+  display: none;
   flex-direction: column;
   align-items: center;
 }
 
+#bookInputs {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 12px;
+}
+
+#books {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+}
+
+#bookInputs h3 {
+  font-size: 47px;
+}
+
+#title {
+  width: 51%;
+  height: 34px;
+  border: 2px solid;
+  padding-left: 1%;
+  border-radius: 3px;
+}
+
+#author {
+  width: 51%;
+  height: 34px;
+  border: 2px solid;
+  padding-left: 1%;
+  border-radius: 3px;
+}
+
+#add {
+  margin-left: 37.3%;
+  width: 15%;
+  height: 37px;
+}
+
+#add:hover {
+  background-color: black;
+  color: white;
+}
+
 #booklist {
-  border: 1px solid black;
-  width: 60%;
-  padding: 2%;
+  width: 80%;
+  border: 2px solid;
+  border-radius: 4px;
 }
 
 #div {
   display: flex;
-  width: 100%;
+  width: 99.2%;
   justify-content: space-between;
-  border-bottom: 1px solid blue;
-}
-
-.bookInputs {
-  width: 100%;
-  display: flex;
+  padding: 2%;
+  background-color: #87a6d86e;
+  box-sizing: border-box;
+  border: 2px solid rgb(8, 124, 66);
+  margin: 3px 3px;
+  height: 53px;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 200px;
+  border-radius: 3px;
 }
 
-.bookInputs input {
-  width: 400px;
+#div:nth-child(even) {
+  background-color: #fff;
 }
 
-.bookInputs button {
-  margin-left: 26.3%;
+#div button {
+  width: 118px;
+  height: 28px;
+}
+
+footer {
+  width: 98%;
+  border: 2px solid;
+  padding: 1%;
+  margin-top: 5%;
+  border-radius: 5px;
 }
