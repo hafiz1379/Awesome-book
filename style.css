@@ -14,6 +14,7 @@ body {
   width: 100%;
   align-items: center;
   border: 2px solid;
+  border-radius: 5px;
 }
 
 h1 {
@@ -72,6 +73,7 @@ li {
   height: 34px;
   border: 2px solid;
   padding-left: 1%;
+  border-radius: 3px;
 }
 
 #author {
@@ -79,10 +81,11 @@ li {
   height: 34px;
   border: 2px solid;
   padding-left: 1%;
+  border-radius: 3px;
 }
 
 #add {
-  margin-left: 37.6%;
+  margin-left: 37.3%;
   width: 15%;
   height: 37px;
 }
@@ -95,6 +98,7 @@ li {
 #booklist {
   width: 80%;
   border: 2px solid;
+  border-radius: 4px;
 }
 
 #div {
@@ -102,12 +106,17 @@ li {
   width: 99.2%;
   justify-content: space-between;
   padding: 2%;
-  background-color: #0025ff6e;
+  background-color: #87a6d86e;
   box-sizing: border-box;
-  border: 2px solid;
-  margin: 1px 3px;
+  border: 2px solid rgb(8, 124, 66);
+  margin: 3px 3px;
   height: 53px;
   align-items: center;
+  border-radius: 3px;
+}
+
+#div:nth-child(even) {
+  background-color: #fff;
 }
 
 #div button {
@@ -120,4 +129,5 @@ footer {
   border: 2px solid;
   padding: 1%;
   margin-top: 5%;
+  border-radius: 5px;
 }
