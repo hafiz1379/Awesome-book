@@ -39,7 +39,7 @@
 
 # 📖 Awesome book with ES6 <a name="about-project"></a>
 
-> This is My Awesome book project using HTML and JavaScript.
+> This is My Awesome book with ES6 project using HTML, CSS and JavaScript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
