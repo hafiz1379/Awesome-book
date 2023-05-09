@@ -7,7 +7,7 @@
   <img src="./77.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Awesome book</b></h3>
+  <h3><b>Awesome book with ES6</b></h3>
 
 </div>
 
@@ -37,9 +37,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Portfolio Desktop Version <a name="about-project"></a>
+# 📖 Awesome book with ES6 <a name="about-project"></a>
 
-> This is My Awesome book project using HTML and JavaScript.
+> This is My Awesome book with ES6 project using HTML, CSS and JavaScript.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -99,8 +99,7 @@ Run this command:
 
 ```sh
   cd my-folder
-  git clone https://github.com/hafiz1379/Hello-Microverse.git
-```
+  git clone https://github.com/hafiz1379/Awesome-book.git
 
 ### Install
 

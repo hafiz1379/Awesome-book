@@ -4,52 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome book</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Awesome book with ES6</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <header id="header">
-    <h1>Awesome Books</h1>
-    <ul>
-        <li><a href="#Books" id="books__link">My books</a></li>
-        <li><a href="#bookInputs" id="bookInputs__link">Add books</a></li>
-        <li><a href="#contact" id="contact__link">Contact</a></li>
-    </ul>
-</header>
-
-  <div id="books">
-      <h1>All Awesome books</h1>
-      <article id="booklist"> </article>   
-
-</div>
-      
-  <div id="bookInputs">
-    <h3>Add a new book</h3>
-    <label for="title" hidden>Title</label>
-    <input type="text" id="title" placeholder="Title"/>
-      <label for="author" hidden>Author</label>
-    <input type="text" id="author" placeholder="Author"/>
-  <button type="button" id="add">Add Book</button>
-</div>
-<section id="contact">
-    <h1 class="h1-contact">Contact information</h1>
-    <div >
-      <p>
-        Do you have any questions or you just want to say "Hello" <br />
-        you can reach out to us!
-      </p>
-      <div class="ul-div">
+    <header id="header">
+        <h1>Awesome Books</h1>
         <ul>
-          <li>Our email example@gmail.com</li>
-          <li>Our phone number: +12345678910</li>
-          <li>Our address: District 6 city ,country</li>
+            <ul><a href="#Books" id="books__link">My books</a></ul>
+            <ul><a href="#bookInputs" id="bookInputs__link">Add books</a></ul>
+            <ul><a href="#contact" id="contact__link">Contact</a></ul>
         </ul>
-      </div>
+    </header>
+    <div class="timer">
+      <p id="date"></p>
     </div>
-  </section>
-  <footer>
-    <div class="copyright">Copyright ...</div>
-  </footer>
-    <script src="script.js"></script>
+      <div id="books">
+          <h1>All Awesome books</h1>
+          <article id="booklist"> </article>   
+    </div>
+      <div id="bookInputs">
+        <h3>Add a new book</h3>
+        <label for="title" hidden>Title</label>
+        <input type="text" id="title" placeholder="Title"/>
+          <label for="author" hidden>Author</label>
+        <input type="text" id="author" placeholder="Author"/>
+      <button type="button" id="add">Add Book</button>
+    </div>
+    <section id="contact">
+        <h1 class="h1-contact">Contact information</h1>
+        <div >
+          <p>
+            Do you have any questions or you just want to say "Hello" <br />
+            you can reach out to us!
+          </p>
+          <div class="ul-div">
+            <ul>
+              <li>Email: example@mail.com</li>
+              <li>Phone number: +123456789</li>
+              <li>Address: District, city ,country</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="copyright">Copyright .....</div>
+      </footer>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
