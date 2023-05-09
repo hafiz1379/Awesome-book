@@ -219,6 +219,7 @@
     "log-symbols": "^4.1.0",
     "lowercase-keys": "^2.0.0",
     "lru-cache": "^7.18.3",
+    "luxon": "^3.3.0",
     "make-dir": "^3.1.0",
     "make-fetch-happen": "^11.1.1",
     "map-age-cleaner": "^0.1.3",
